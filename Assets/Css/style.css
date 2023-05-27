@@ -1,0 +1,148 @@
+:root{
+    --color1: #f7ead9;
+    --color2: #e1d2a9;
+    --color3: #88b499;
+    --color4: #619885;
+    --color5: #67594e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#top-header{
+    display: flex;
+    width: 100vw;
+    height: 12.5vh;
+    background-color: var(--color3);
+    justify-content: space-between;
+
+}
+
+#icon-holder{
+    box-sizing: margin-box;
+    width: 20vh;
+    height: 100%;
+}
+
+#icon{
+    border-radius: 30px;
+}
+
+.header-links{
+    display: flex;
+    justify-self: end;
+    align-self: flex-end;
+    gap: 4vw;
+    margin-right: 2vw;
+}
+
+.header-links a{
+    color: var(--color5);
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+.header-links a:hover{
+    transform: translateY(-4px);
+    transition: all 300ms ease-in-out;
+}
+
+.header-links a:active{
+    transform: translateY(5px);
+    color: black;
+}
+
+#main-game{
+    display: flex;
+    width: 100vw;
+    height: 87.5vh;
+    background-color: var(--color4);
+}
+
+#board-content{
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+}
+
+#board{
+    display: grid;
+    max-width: 50vw;
+    max-height: 50vw;
+    width: 80vh;
+    height: 80vh;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(8, 12.5%);
+    margin: 5vh;
+    box-shadow: 10px 10px 15px 8px;
+}
+
+#board .even-row:nth-child(2n), #board .odd-row:nth-child(2n+1){
+    background-color: black;
+}
+
+#board .even-row:nth-child(2n+1), #board .odd-row:nth-child(2n){
+    background-color: white;
+}
+
+#ui-content{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ui{
+    display: flex;
+    max-width: 50vw;
+    max-height: 50vw;
+    width: 90%;
+    height: 80vh;
+    background-color: var(--color5);
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px 8px;
+}
+
+
+#description{
+    display: flex;
+    width: 100vw;
+    height: 87.5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#text{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 5vw;
+    justify-content: center;
+    width: 60vw;
+    height: 70vh;
+    background-color: var(--color4);
+    border-radius: 30px;
+    font-size: 2vw;
+    font-family: sans-serif;
+    color: black;
+    opacity: 0.7;
+}
+
+#main-background{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+.responsive {
+    width: 100%;
+    height: 100%;
+}
+
