@@ -41,9 +41,12 @@ function playAudio(){
 
 const form1 = document.querySelector("#color1");
 const form2 = document.querySelector("#color2");
+const form3 = document.querySelector("#mainInput");
 
 form1.addEventListener('submit', corClaras);
 form2.addEventListener('submit', corEscuras);
+form3.addEventListener('submit', gameInput);
+
 
 function corClaras (evento) {
     const cor = form1.querySelector('#color-claras');
@@ -59,8 +62,28 @@ function corEscuras (evento) {
     newColor.style.setProperty('--blackSquares', `${cor.value}`);
 }
 
+function gameInput (evento) {
+    const square = form3.querySelector('#square-name');
+    evento.preventDefault();
+    console.log(square.value);
+    //This line is to clean the last unput
+    form3.innerHTML = '<input type="text" name="square-name" id="square-name" placeholder="a4, b3, c2..."><button type="submit" id="OK">OK</button>'
+}
+
 /*Lógica antiga da troca de cores:
 let casa = document.querySelector(`#square-${i}`);
             console.log(cor.value);
             casa.style.background = `${cor.value}`;
 */
+
+let casaI = document.querySelector("#square-1 p");
+casaI.innerHTML = "1";
+casaI.style.color = '#c4c10c';
+
+casaI = document.querySelector("#square-2 p");
+casaI.innerHTML = "V";
+casaI.style.color = '#00ff00';
+
+casaI = document.querySelector("#square-3 p");
+casaI.innerHTML = "X";
+casaI.style.color = '#ff0000';

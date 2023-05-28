@@ -101,6 +101,13 @@
     background-color: var(--whiteSquares);
 }
 
+#board div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(2vw + 2vh);
+}
+
 #ui-content{
     width: 40vw;
     height: 100vw;
