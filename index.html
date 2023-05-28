@@ -93,7 +93,7 @@
             <div id="ui">
                 <div id="color-picker">
                     <form action="#" method="get">
-                        <input type="color">
+                        <input type="color", value="#ffffff">
                         Claras
                     </form>
                     <p id="select-colors">Personalize as cores</p>
@@ -105,13 +105,11 @@
                 <p id="ui-text">Informe a letra e o número da casa em questão</p>
                 <div id="game-input">
                     <form action="#" method="get">
-                        <input type="text" name="square-name" id="square-name" placeholder="Informe o nome da casa (a4)...">
+                        <input type="text" name="square-name" id="square-name" placeholder="a4, b3, c2...">
+                        <button type="submit" id="OK">
+                            OK
+                        </button>
                     </form>
-                    <div id="OK">
-                            <p>
-                                OK
-                            </p>
-                    </div>
                 </div>
                 <div id="control-game">
                     <div id="start-game">Começa o Jogo</div>

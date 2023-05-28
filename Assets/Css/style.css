@@ -10,9 +10,11 @@
 *{
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
 #top-header{
+    max-width: 100%;
     display: flex;
     width: 100vw;
     height: 12.5vh;
@@ -57,6 +59,7 @@
 }
 
 #main-game{
+    max-width: 100%;
     display: flex;
     width: 100vw;
     height: 87.5vh;
@@ -111,6 +114,7 @@
 }
 
 #color-picker{
+    max-width: calc(100% - 4vh);
     display: flex;
     width: 100%;
     height: 20%;
@@ -137,6 +141,7 @@
 }
 
 #game-input{
+    max-width: calc(100% - 4vh);
     display: flex;
     width: 100%;
     height: 20%;
@@ -147,8 +152,8 @@
 #OK{
     margin-left: 1vw;
     background-color: gray;
-    height: 4vh;
-    width: 4vh;
+    height: auto;
+    width: auto;
     font-size: 1rem;
     border-radius: 6px;
     box-shadow: 2px 2px 3px 3px;
@@ -185,10 +190,6 @@
     padding: 2vh;
 }
 
-#start-game:hover, #end-game:hover{
-    
-}
-
 #description{
     display: flex;
     width: 100vw;
@@ -207,7 +208,7 @@
     height: 70vh;
     background-color: var(--color4);
     border-radius: 30px;
-    font-size: 2vw;
+    font-size: calc(1.2vh + 1.2vw);
     font-family: sans-serif;
     color: black;
     opacity: 0.7;
