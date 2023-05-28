@@ -5,6 +5,8 @@
     --color4: #619885;
     --color5: #67594e;
     --color6: #70c5a7;
+    --blackSquares: #000000;
+    --whiteSquares: #ffffff;
 }
 
 *{
@@ -92,11 +94,11 @@
 }
 
 #board .even-row:nth-child(2n), #board .odd-row:nth-child(2n+1){
-    background-color: black;
+    background-color: var(--blackSquares);
 }
 
 #board .even-row:nth-child(2n+1), #board .odd-row:nth-child(2n){
-    background-color: white;
+    background-color: var(--whiteSquares);
 }
 
 #ui-content{
