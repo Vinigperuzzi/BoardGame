@@ -1,14 +1,31 @@
-let andamento = false;
-let tocando = false;
+let andamento = false, tocando = false, audioNumber = 1;
 let audio = new Audio ('Assets/audio/audio1.mp3');
-let audioNumber = 1;
+let testecor = '#bfb304'
+
+let order = [];
+for (let i = 1; i<=64; i++){
+    order.push(i);
+}
+
+
+const squares = [];//casas com index, estado e nome das casas
+for(let i = 0; i<8; i++){
+    for(let j = 1; j <= 8; j++){
+        squares.push(createSquares((i*8)+j, 0, j, i+1));
+        // let casa = document.querySelector(`#square-${(i*8) + j}`);
+        // casa.innerHTML = `${squares[(i*8) + j - 1].square}`
+        // casa.style.color = testecor;
+    }
+}
 
 function comecaJogo(){
     if (!andamento){
         console.log('Jogo iniciado');
         andamento = true;
+        mainGame();
     } else {
         console.log('Jogo já está em andamento');
+        alert('Jogo já está em andamento');
     }
 }
 
@@ -16,8 +33,10 @@ function terminaJogo(){
     if (andamento){
         console.log('Jogo terminado');
         andamento = false;
+        fimDeJogo();
     } else {
         console.log('O jogo não está executando');
+        alert('O jogo não está executando');
     }
 }
 
@@ -76,14 +95,95 @@ let casa = document.querySelector(`#square-${i}`);
             casa.style.background = `${cor.value}`;
 */
 
+
+
+//---------------------------Testes diversos com cores------------//
+
 let casaI = document.querySelector("#square-1 p");
 casaI.innerHTML = "1";
-casaI.style.color = '#c4c10c';
+casaI.style.color = testecor;
 
 casaI = document.querySelector("#square-2 p");
+casaI.innerHTML = "2";
+casaI.style.color = testecor;
+
+casaI = document.querySelector("#square-3 p");
 casaI.innerHTML = "V";
 casaI.style.color = '#00ff00';
 
-casaI = document.querySelector("#square-3 p");
+casaI = document.querySelector("#square-4 p");
+casaI.innerHTML = "V";
+casaI.style.color = '#00ff00';
+
+casaI = document.querySelector("#square-5 p");
 casaI.innerHTML = "X";
 casaI.style.color = '#ff0000';
+
+casaI = document.querySelector("#square-6 p");
+casaI.innerHTML = "X";
+casaI.style.color = '#ff0000';
+
+
+//------------------Funções auxiliares do jogo-----------//
+
+
+function numberToLetter(number){
+    const letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
+    return letters[number-1];
+}
+
+function createSquares(index, status, rank, row){
+    let square = `${numberToLetter(rank)}${row}`;
+    return {
+        index,
+        status,
+        square
+    };
+}
+
+
+
+function shuffleArray(array){
+    let aux;
+    for(let i = 0; i<array.length; i++){
+        let newPos = Math.random();
+        newPos *= 64;
+        newPos = parseInt(newPos, 10);
+        aux = array[i];
+        array[i] = array[newPos];
+        array[newPos] = aux;
+    }
+}
+
+function mainGame(){
+    let gameOrder = [], palpite = 1;
+    gameOrder = order.concat(gameOrder);
+    shuffleArray(gameOrder);
+    console.log(gameOrder);
+    for(let i = 0; i<64; i++){
+        if(gameOrder[0] == squares[i].index){
+            let casa = document.querySelector(`#square-${squares[i].index} p`);
+            casa.innerHTML = `${palpite}`
+            casa.style.color = testecor;
+        }
+    }
+}
+
+function fimDeJogo(){
+    for(let i = 0; i<8; i++){
+        for(let j = 1; j <= 8; j++){
+            squares.push(createSquares((i*8)+j, 0, j, i+1));
+            let casa = document.querySelector(`#square-${(i*8) + j} p`);
+            casa.innerHTML = '';
+        }
+    }
+}
+
+/*TODO: iniciar o mainGame, mostrando o primeiro palpite, depois
+* para cada submissão avançar o jogo.
+* Talvez ir na pegada do C#, criar uma função para iniciar(start)
+* e outra para atualizar(update).
+* O botão que encerra o jogo reseta tudo, tira os p's com ="";
+* mostra os resultados quantidade de jogadas, erros e acertos e tempo
+* e reseta os valores
+*/
