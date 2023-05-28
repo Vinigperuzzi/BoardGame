@@ -27,6 +27,13 @@
     box-sizing: margin-box;
     width: 20vh;
     height: 100%;
+
+}
+
+#icon-holder:hover{
+    cursor: pointer;
+    transform: translateX(20px);
+    transition: all 300ms ease-in-out;
 }
 
 #icon{
