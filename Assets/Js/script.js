@@ -29,16 +29,19 @@ function terminaJogo(){
     }
 }
 
+let icon = document.querySelector('#icon');
 function playAudio(){
     if(!tocando){
         audio = new Audio(`Assets/audio/audio${audioNumber}.mp3`);
         audio.play()
         tocando = true;
         audioNumber++;
+        icon.style.boxShadow = "5px 5px 4px 4px rgba(1,2,111,11)";
     } else {
         audio.pause();
         audio.currentTime = 0;
         tocando = false;
+        icon.style.boxShadow = "5px 5px 4px 4px rgba(255,2,111,11)";
     }
     audioNumber = (audioNumber%2) + 1;
 }
@@ -75,6 +78,7 @@ function gameInput (evento) {
     //This line is to clean the last unput
     form3.innerHTML = '<input type="text" name="square-name" id="square-name" placeholder="a4, b3, c2..."><button type="submit" id="OK">OK</button>'
 }
+
 
 /*Lógica antiga da troca de cores:
 let casa = document.querySelector(`#square-${i}`);
