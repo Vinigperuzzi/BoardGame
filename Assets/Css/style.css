@@ -153,6 +153,9 @@
     justify-self: center;
     align-self: center;
     margin-top: 20vh;
+    color: var(--color5);
+    font-family: sans-serif;
+    font-size: calc(0.6vh + 0.6vw);
 }
 
 #game-input{
