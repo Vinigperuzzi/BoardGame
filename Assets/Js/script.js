@@ -95,13 +95,19 @@ function numberToLetter(number){
     const letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
     return letters[number-1];
 }
+function numberToLetterCaps(number){
+    const letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
+    return letters[number-1];
+}
 
 function createSquares(index, status, rank, row){
     let square = `${numberToLetter(rank)}${row}`;
+    let squareCaps = `${numberToLetterCaps(rank)}${row}`;
     return {
         index,
         status,
-        square
+        square,
+        squareCaps
     };
 }
 
@@ -156,7 +162,7 @@ function updateGame(formValue){
         return;
     }
 
-    if (squares[order[pace]].square == formValue){
+    if (squares[order[pace]].square == formValue || squares[order[pace]].squareCaps == formValue){
         let casa = document.querySelector(`#square-${squares[order[pace]].index} p`);
         casa.innerHTML = `V`;
         casa.style.color = greenColor;
