@@ -179,17 +179,7 @@ function updateGame(formValue){
     pace++;
 
     if (pace >= 64){
-        if(hit == 64){
-            perfectAudio.play();
-            alert('Perfeito!!! Você é demais!!');
-        } else if (hit >= miss){
-            victoryAudio.play();
-            alert('Parabéns!!!');
-        } else{
-            failAudio.play();
-            alert("Fim de jogo.");
-        }
-        andamento = false;
+        finalInteraction();
         fimDeJogo();
         return;
     }
@@ -203,8 +193,25 @@ function updateGame(formValue){
     }
 }
 
+function finalInteraction(){
+    if (pace >= 10){
+        if(hit == pace){
+            perfectAudio.play();
+            alert('Perfeito!!! Você é demais!!');
+        } else if (hit >= miss){
+            victoryAudio.play();
+            alert('Parabéns!!!');
+        } else{
+            failAudio.play();
+            alert("Fim de jogo.");
+        }
+    }
+}
+
 
 function fimDeJogo(){
+    finalInteraction();
+    andamento = false;
     endClock = Date.now();
     let timePlayed = endClock - startClock;
     let minutes = Math.floor((timePlayed/1000/60) << 0);
@@ -216,7 +223,7 @@ function fimDeJogo(){
             casa.innerHTML = '';
         }
     }
-    alert(`Seu tempo de jogo foi: ${minutes} Minutes, ${seconds} Seconds.\nDos ${pace} lances você acertou ${hit} e errou ${miss}.`);
+    alert(`Seu tempo de jogo foi: ${minutes} Minutos, ${seconds} Segundos.\nDos ${pace} lances você acertou ${hit} e errou ${miss}.`);
     step = 0; hit = 0; miss = 0; pace = 0;
 }
 
