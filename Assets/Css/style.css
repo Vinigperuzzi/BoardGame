@@ -269,3 +269,29 @@ footer p{
     border-radius: 10px;
 }
 
+@media screen and (orientation:portrait) {
+    #main-game{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #board-content{
+        width: 60vw;
+        height: 100vh;
+        display: flex;
+    }
+    #board{
+        max-width: 60vw;
+        max-height: 60vw;
+        width: 60vw;
+        height: 60vh;
+    }
+    #ui-content{
+        height: 80vh;
+        width: 100vw;
+    }
+    #ui-text {
+        margin-top: 2vh;
+    }
+}
