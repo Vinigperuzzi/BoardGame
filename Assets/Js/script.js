@@ -226,8 +226,3 @@ function fimDeJogo(){
     alert(`Seu tempo de jogo foi: ${minutes} Minutos, ${seconds} Segundos.\nDos ${pace} lances você acertou ${hit} e errou ${miss}.`);
     step = 0; hit = 0; miss = 0; pace = 0;
 }
-
-
-function warning(){
-    alert('Desculpe! A página em questão ainda não está implementada, por favor, seja paciente!');
-}
