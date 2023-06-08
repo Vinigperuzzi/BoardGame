@@ -52,8 +52,8 @@ const form1 = document.querySelector("#color1");
 const form2 = document.querySelector("#color2");
 const form3 = document.querySelector("#mainInput");
 
-form1.addEventListener('submit', corClaras);
-form2.addEventListener('submit', corEscuras);
+form1.addEventListener('input', corClaras);
+form2.addEventListener('input', corEscuras);
 form3.addEventListener('submit', gameInput);
 
 
