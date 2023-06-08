@@ -167,29 +167,6 @@
     justify-content: center;
 }
 
-#OK{
-    margin-left: 1vw;
-    background-color: gray;
-    height: auto;
-    width: auto;
-    font-size: 1rem;
-    border-radius: 6px;
-    box-shadow: 2px 2px 3px 3px;
-    padding: 0.5vh;
-}
-
-#OK:hover, #start-game:hover, #end-game:hover{
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
-    background-color: rgb(70, 70, 70);
-}
-
-#OK:active, #start-game:active, #end-game:active{
-    cursor: pointer;
-    transform: translateY(5px);
-    transition: all 300ms ease-in-out;
-}
-
 #control-game{
     display: flex;
     justify-self: center;
