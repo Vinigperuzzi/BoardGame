@@ -174,7 +174,7 @@
     justify-content: space-evenly;
 }
 
-#start-game, #end-game{
+.UI-buttons{
     margin-left: 1vw;
     background-color: gray;
     height: auto;
@@ -183,6 +183,17 @@
     border-radius: 6px;
     box-shadow: 2px 2px 3px 3px;
     padding: 2vh;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.UI-buttons:hover{
+    background-color: rgb(39, 37, 37);
+}
+
+.UI-buttons:active{
+    background-color: rgb(16, 20, 34);
+    transform: translateY(1vh)
 }
 
 #description{
