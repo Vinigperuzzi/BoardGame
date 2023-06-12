@@ -76,7 +76,8 @@ function gameInput (evento) {
     evento.preventDefault();
     updateGame(square.value);
     //This line is to clean the last unput
-    form3.innerHTML = '<input type="text" name="square-name" id="square-name" placeholder="a4, b3, c2..."><button type="submit" id="OK">OK</button>'
+    square.value = '';
+    square.focus();
 }
 
 
