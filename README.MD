@@ -1,12 +1,16 @@
-# BoardGame
-This repository will hold the code, and the way to put online, a game designed to help on he learning of the squares of the chess board.
+# BoardGame - Chess Squares Learning Game
+Welcome to the BoardGame repository! Here, you'll find the code and instructions for hosting a game designed to enhance the learning experience of chess board squares.
 
-This game, is initially created in C pure. You can see the project here: https://github.com/Vinigperuzzi/BoardApp
+The game was initially crafted in pure C and later transformed into a web application. You can explore the original C project [here](https://github.com/Vinigperuzzi/BoardApp).
 
-#---------------------------------------------------------------------------------
+## Play the Game
+Ready to test your chess square knowledge? Play the game online [here](https://vinigperuzzi.github.io/BoardGame/).
 
-You can play the game here: https://vinigperuzzi.github.io/BoardGame/
+This project represents a significant milestone for me, being my first major project. From project conception to design, it's was been a journey of learning and creativity, incorporating HTML, CSS, and JS.
 
-This is my first big project, project and design by myself, involving HTML, CSS and JS.
+## Easter Egg Alert 🐣🎶
+As a fun addition, there's an easter egg hidden on the page—an auditory surprise! Can you find it? Feel free to explore and enjoy this interactive learning experience.
 
-There's an easter egg in the page, a sonorous one, can you find it?
+Thank you for visiting the BoardGame repository. If you have any feedback or suggestions, don't hesitate to reach out. Happy gaming! 🎲🚀
+
+### Vinigperuzzi
