@@ -13,4 +13,5 @@ As a fun addition, there's an easter egg hidden on the page—an auditory surpri
 
 Thank you for visiting the BoardGame repository. If you have any feedback or suggestions, don't hesitate to reach out. Happy gaming! 🎲🚀
 
-### Vinigperuzzi
+Happy Coding! 
+### Vinigperuzzi 🧙‍♂️
